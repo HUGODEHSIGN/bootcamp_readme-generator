@@ -1,3 +1,4 @@
+import { licenseLookup } from './licenseLookup.js';
 export default function generateReadMe({
   name,
   description,
@@ -8,7 +9,9 @@ export default function generateReadMe({
   contribute,
   tests,
 }) {
-  return `${license}
+  const badge = licenseLookup.filter(({ name }) => name === license)[0].badge;
+
+  return `${badge}
 
 # ${name}
 

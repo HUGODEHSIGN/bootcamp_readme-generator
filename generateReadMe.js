@@ -11,14 +11,12 @@ export default function generateReadMe({
 }) {
   const badge = licenseLookup.filter(({ name }) => name === license)[0].badge;
 
-  return `${badge}
-
-# ${name}
+  return `${license !== 'None' ? badge + '\n\n' : ''}# ${name}
 
 ## Description
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
+bid
 ${description}
 
 ## Table of Contents
@@ -40,19 +38,19 @@ ${usage}
 
 ## Credits
 
-${credits}
+${credits.length !== 0 ? credits : 'N/A'}
 
 ## License
 
-This project uses the ${license} license.
+${license !== 'None' ? `This project uses the ${license}.` : 'N/A'}
 
 ---
 
 ## How to Contribute
 
-${contribute}
+${contribute.length !== 0 ? contribute : 'N/A'}
 
 ## Tests
 
-${tests}`;
+${tests.length !== 0 ? tests : 'N/A'}`;
 }

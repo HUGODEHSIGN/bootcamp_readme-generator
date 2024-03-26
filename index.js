@@ -4,7 +4,6 @@ import { licenseLookup } from './licenseLookup.js';
 import createFile from './createFile.js';
 
 const licenseNames = licenseLookup.map(({ name }) => name);
-console.log(licenseNames);
 
 import inquirer from 'inquirer';
 inquirer

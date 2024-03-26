@@ -7,7 +7,7 @@ export default async function createFile(data) {
   await mkdir(`./readme/${data.name}`, { recursive: true }, (err) => {
     if (err) throw err;
   });
-
+  console.log('Folder has been created');
   // write file
   await writeFile(
     `./readme/${data.name}/README.md`,
@@ -15,5 +15,9 @@ export default async function createFile(data) {
     (err) => {
       if (err) throw err;
     }
+  );
+  console.log('File has been written');
+  console.log(
+    `Please find the new readme under './readme/${data.name}/README.md'`
   );
 }

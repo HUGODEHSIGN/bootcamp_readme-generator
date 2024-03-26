@@ -1,10 +1,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# bootcamp_readme-generator
+# my-project
 
 ## Description
 
-As a fullstack bootcamp student, I need a fast way to create readme's for all the projects I'm going to build.
+description here!
 
 ## Table of Contents
 
@@ -15,15 +15,15 @@ As a fullstack bootcamp student, I need a fast way to create readme's for all th
 
 ## Installation
 
-Clone the repo, run 'npm i' to install dependencies
+installation guide here!
 
 ## Usage
 
-'run the application with 'node index.js', follow prompts
+usage here!
 
 ## Credits
 
-N/A
+123
 
 ## License
 
@@ -33,7 +33,7 @@ This project uses the The MIT License.
 
 ## How to Contribute
 
-N/A
+no contributors
 
 ## Tests
 

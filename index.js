@@ -1,10 +1,7 @@
 // import { mkdir } from 'node:fs';
 
-// mkdir('./readme/test-1', { recursive: true }, (err) => {
-//   if (err) throw err;
-// });
-
 import { licenseLookup } from './licenseLookup.js';
+import createFile from './createFile.js';
 
 const licenseNames = licenseLookup.map(({ name }) => name);
 console.log(licenseNames);
@@ -43,10 +40,6 @@ inquirer
       loop: false,
     },
     {
-      name: 'features',
-      message: 'What features does your project have?',
-    },
-    {
       name: 'contribute',
       message: 'How do others contribute to this project? (optional)',
     },
@@ -56,5 +49,5 @@ inquirer
     },
   ])
   .then((answer) => {
-    console.log(answer);
+    createFile(answer);
   });
